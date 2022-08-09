@@ -1,0 +1,82 @@
+// Trending 
+
+.head-line {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 80px;
+}
+
+.head-line h2{
+    font-size: 53px;
+    line-height: 76px;
+    width: 50%;
+}
+
+.head-line p {
+    width: 50%;
+    height: 81px;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: justify;
+    opacity: 0.5;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 80px;
+    grid-row-gap: 136px;
+    grid-column-gap: 90px;
+    padding-bottom: 150px;
+}
+
+.galeria .galeria-item {
+    position: relative;
+}
+
+.galeria .galeria-item img {
+    width: 448px;
+    height: 323px;
+}
+
+.box-value {
+    position: absolute;
+    display: flex;
+    left: -25px;
+    top: 291px;
+    width: 496px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(18px);
+}
+
+.box-value .value {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 95px 12px 24px;
+}
+
+.box-value h5 {
+    font-size: 25px;
+}
+
+.box-value p {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.box-value h4 {
+    padding-top: 7px;
+    font-size: 20px;
+    background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.botao-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

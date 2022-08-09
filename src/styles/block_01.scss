@@ -1,3 +1,38 @@
-h1 {
-    color: blue;
+nav {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar li {
+    list-style: none;
+}
+
+nav .navbar li:nth-child(2) {
+    padding: 0 30px;
+}
+
+nav span {
+    padding: 0 220px 0 150px;
+    cursor: pointer;
+}
+
+nav .navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 27px;
 }
