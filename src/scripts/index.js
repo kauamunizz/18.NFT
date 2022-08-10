@@ -11,4 +11,4 @@ $(function (){
         centerPadding: '60px',
         variableWidth: true,
     })
-})
+});
