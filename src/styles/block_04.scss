@@ -2,7 +2,7 @@
 
 .market {
     height: 100vh;
-    margin: 0 80px;
+    // margin: 0 80px;
 }
 
 .market h2 {
@@ -19,7 +19,6 @@
 
 .market-list .market-list-item {
     list-style: none;
-    padding-right: 28px;
     transition: transform 0.5s;
 }
 
@@ -29,6 +28,7 @@
 
 .market-list .market-list-item a {
     text-decoration: none;
+    margin: 0 5px;
 }
 
 .galeria-market {
@@ -36,7 +36,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 33px;
     grid-row-gap: 51px;
-    margin-top: 45px;
+    margin: 45px 80px 0;
 }
 
 .galeria-market img {
@@ -49,9 +49,7 @@
 .polaroide {
     display: flex;
     justify-content: space-around;
-    // align-items: flex-start;
     flex-wrap: wrap;
-    // flex-direction: column;
     padding: 10px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, .2);
@@ -122,9 +120,17 @@
 }
 
 
+.button-ul-market {
+    padding: 8px 12px;
+    color: #fff;
+    background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
+    border-radius: 30px;
+    border: none;
+}
+
 .button-market {
     width: 90%;
-    padding: 8px 24px;
+    padding: 8px 16px;
     color: #fff;
     background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
     border-radius: 10px;

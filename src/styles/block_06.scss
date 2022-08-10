@@ -1,0 +1,51 @@
+// footer
+
+.footer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    .miss {
+        background-color: rgba(255, 255, 255, .2);
+        backdrop-filter: blur(3px);
+        border: 1px solid #fff;
+        border-radius: 25px;
+        padding: 80px 250px;
+        h2{
+            display: flex;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: bold;
+        }
+        p {
+            padding: 13px 0 60px;
+            font-size: 13px;
+            opacity: .5;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+
+            input[type=email]{
+                padding: 16px 250px 16px 24px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50px;
+                border: none;
+                margin-right: 19px;
+                color: #fff;
+            }
+            input[type=button] {
+                cursor: pointer;
+            }
+        }
+    }
+
+    span{
+        padding-top: 80px;
+        font-size: 12px;
+    }
+}
+
