@@ -19,6 +19,12 @@ body{
     background-size: cover;
     color: #fff;
     font-family: 'Inter', sans-serif;
+    
+    @media (max-width: 576px) {
+        background: url(../assets/imgs/Main-cel.png) no-repeat;
+        background-size: cover;
+        background-color: black;
+    }
 }
 
 button {
@@ -26,7 +32,7 @@ button {
 }
 
 .button {
-    padding: 8px 24px;
+    padding: 8px 16px;
     color: #fff;
     background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
     border-radius: 30px;

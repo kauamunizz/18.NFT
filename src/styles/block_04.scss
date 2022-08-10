@@ -3,109 +3,132 @@
 .market {
     height: 100vh;
     // margin: 0 80px;
-}
-
-.market h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 53px;
-}
-
-.market-list {
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
-}
-
-.market-list .market-list-item {
-    list-style: none;
-    transition: transform 0.5s;
-}
-
-.market-list .market-list-item:hover {
-    transform: scale(1.11);
-}
-
-.market-list .market-list-item a {
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.galeria-market {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 33px;
-    grid-row-gap: 51px;
-    margin: 45px 80px 0;
-}
-
-.galeria-market img {
-    align-items: center;
-    width: 230px;
-    height: 240px;
-    margin-bottom: 5px;
-}
-
-.polaroide {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, .2);
-    backdrop-filter: blur(4px);
-
-    transition: all 0.7s ease;
-}
-
-.polaroide:hover {
-    transform: scale(1.05);
-}
-
-.polaroide .infos {
-    display: flex;
-    flex-direction: column;
-
-    h3{
-        font-size: 21px;
-        font-weight: 400;
-    }
-    p{
-        padding-top: 4px;
-        font-size: 11px;
-        opacity: .5;
-    }
-}
-
-
-.polaroide .price {
-    display: flex;
-    align-items: center;
     
-    h4{
-        font-size: 21px;
-        background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 53px;
+    }
+
+    .market-list {
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+
+        .market-list-item {
+            list-style: none;
+            transition: transform 0.5s;
+            
+            &:hover {
+                transform: scale(1.11);
+            }
+            
+             a {
+                text-decoration: none;
+                margin: 0 5px;
+            }
+        }
+    }
+    .galeria-market {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 33px;
+        grid-row-gap: 51px;
+        margin: 45px 80px 0;
+
+        img {
+            align-items: center;
+            width: 230px;
+            height: 240px;
+            margin-bottom: 5px;
+        }
+        
+        .polaroide {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, .2);
+            backdrop-filter: blur(4px);
+            transition: all 0.7s ease;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+            
+            .infos {
+                display: flex;
+                flex-direction: column;
+            
+                h3{
+                    font-size: 21px;
+                    font-weight: 400;
+                }
+                p{
+                    padding-top: 4px;
+                    font-size: 11px;
+                    opacity: .5;
+                }
+            }
+            
+            .price {
+                display: flex;
+                align-items: center;
+                
+                
+                h4{
+                    font-size: 21px;
+                    background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            
+            .buy {
+                display: none;
+                margin-top: 10px;
+            }
+            
+        }
+        .polaroide:hover .buy {
+            display: block;
+            animation: fade_in_show 0.5s
+        }
+    }
+    
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+    @media (max-width: 576px) {
+        // market
+        height: auto;
+        
+        h2 {
+            font-size: 33px;
+        }
+        .market-list{
+            flex-wrap: wrap;
+        }
+        .market-list-item{
+            margin: 11px 1px;
+        }
+        .galeria-market{
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 16px;
+            margin: 45px 60px 0;
+        }
+        .polaroide:nth-child(even){
+            display: none;
+        }
     }
 }
 
-.market .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 25px;
-}
-
-.buy {
-    display: none;
-    margin-top: 10px;
-}
-
-.polaroide:hover .buy {
-    display: block;
-    animation: fade_in_show 0.5s
-}
 
 @keyframes fade_in_show {
     0% {

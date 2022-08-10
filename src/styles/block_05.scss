@@ -15,20 +15,19 @@
         justify-content: center;
         align-items: center;
         padding-top: 27px;
-    }
+
+        li {
+            list-style: none;
+            padding-right: 28px;
+            transition: transform 0.5s;
     
-    ul li {
-        list-style: none;
-        padding-right: 28px;
-        transition: transform 0.5s
-    }
-    
-    ul li:hover {
-        transform: scale(1.05);
-    }
-    
-    ul li a {
-        text-decoration: none;
+            &:hover {
+                transform: scale(1.05);
+            }
+            a {
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -43,6 +42,7 @@
 
 .slick-slide {
     transform: scale(.9);
+    width: auto;
 }
 
 .slick-center {
@@ -100,17 +100,42 @@
     }
 }
 
-.carrousel-div {
+.carousel-div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto 80px;
 }
 
-.slick-slide {
-    width: auto;
-}
-
 .next-to, .back-to {
     cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .carousel {
+        padding: 0;
+
+        h2{
+            font-size: 44px;
+        }
+    }
+    .carousel-div {
+        margin: 0;
+
+    }
+    .carousel-items{
+        margin: 40px 10px;
+    }
+    .artist{
+        margin: 0;
+
+        button {
+            width: 90%;
+            margin: 0 20px 13px;
+        }
+    } 
+    .slick-list {
+        padding: 0 63px;
+        border-radius: 30px;
+    }
 }

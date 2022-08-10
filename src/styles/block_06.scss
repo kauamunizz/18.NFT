@@ -49,3 +49,29 @@
     }
 }
 
+
+@media (max-width: 576px) {
+    .footer {
+        margin: 0 20px;
+        .miss{
+            width: 100%;
+            text-align: center;
+            padding: 80px 40px;
+    
+            h2{
+                font-size: 29px;
+            }
+            p{
+                font-size: 11px;
+                padding: 13px 0 37px;
+            }
+            form {
+                flex-direction: column;
+                    input[type=email] {
+                        padding: 16px 50px 16px 24px;
+                        margin: 0 0 20px;
+                    }
+            }
+        }
+    }
+}
