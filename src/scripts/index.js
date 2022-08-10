@@ -9,6 +9,6 @@ $(function (){
         prevArrow: $(".back-to"),
         nextArrow: $(".next-to"),
         centerPadding: '60px',
-        variableWidth: true,
+        variableWidth: true
     })
 });
