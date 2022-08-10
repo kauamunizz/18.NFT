@@ -1,5 +1,6 @@
 import '../styles/styles.scss';
 
+
 $(function (){
     $(".carousel-items").slick({
         infinite: true,
