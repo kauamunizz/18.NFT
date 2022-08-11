@@ -93,7 +93,7 @@
         h1{
             font-size: 56px;
             min-width: 300px;
-            text-align: center;
+            // text-align: center;
         }
         p{
             width: auto;
@@ -105,14 +105,36 @@
         margin-top: 20px;
         
         .glass {
-            display: none;
+            // display: none;
+            top: 295px;
+            left: 3px;
+            height: 60px;
+            align-items: center;
+            padding: 0 15px;
+
+            .img1 {
+                width: 158px;
+                height: 31px;
+            }
+            .img2 {
+                width: 120px;
+                height: 28px;
+            }
+            .img3 {
+                width: 100px;
+                height: 22px;
+            }
         }
         
     }
     .main .secundario img{
-        width: 370px;
-        height: 410px;
-        padding-top: 10px;
+        width: 350px;
+        height: 380px;
+        // padding-top: 10px;
+
+        &:nth-child(2){
+            margin: 0 10px;
+        }
     }
 }
 
