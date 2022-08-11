@@ -44,56 +44,93 @@
         }
         
         .polaroide {
+            position: relative;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            flex-direction: column;
+            min-height: calc(425px - 20px - 4px);
             padding: 10px;
             border-radius: 20px;
-            background-color: rgba(255, 255, 255, .2);
+            border: 2px solid transparent;
+            background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(4px);
+            overflow: hidden;
             transition: all 0.7s ease;
-            
-            &:hover {
-                transform: scale(1.05);
-            }
-            
-            .infos {
-                display: flex;
-                flex-direction: column;
-            
-                h3{
-                    font-size: 21px;
-                    font-weight: 400;
-                }
-                p{
-                    padding-top: 4px;
-                    font-size: 11px;
-                    opacity: .5;
-                }
-            }
-            
-            .price {
-                display: flex;
-                align-items: center;
                 
+            .infos-bloco {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 20px;
+
+                .infos {
+                    display: flex;
+                    flex-direction: column;
                 
-                h4{
-                    font-size: 21px;
-                    background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    h3{
+                        font-size: 21px;
+                        font-weight: 400;
+                    }
+                    p{
+                        padding-top: 4px;
+                        font-size: 11px;
+                        opacity: .5;
+                    }
                 }
+                
+                .price {
+                    display: flex;
+                    align-items: center;
+                    
+                    
+                    h4{
+                        font-size: 21px;
+                        background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+            .galeria-imagem {
+                width: 100%;
+                height: 307px;
+                margin-bottom: 25px;
+                border-radius: 14px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transition: height .5s .2s;
+
             }
             
             .buy {
-                display: none;
+                position: absolute;
+                width: calc(100% - 16px - 3px);
+                bottom: -30px;
+                opacity: 0;
                 margin-top: 10px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 19px;
+                font-weight: 500;
+                line-height: 23px;
+                transition: .5s;
             }
             
-        }
-        .polaroide:hover .buy {
-            display: block;
-            animation: fade_in_show 0.5s
+            &:hover {
+                border: 2px solid #FFFFFF;
+                
+                .galeria-imagem {
+                    height: 232px;
+                    transition: height .5s;
+                }
+                
+                .buy {
+                    bottom: 10px;
+                    opacity: 1;
+                    transition: .5s .2s;
+                }
+            }
         }
     }
     
@@ -130,19 +167,6 @@
 }
 
 
-@keyframes fade_in_show {
-    0% {
-         opacity: 0;
-         transform: scale(0)
-    }
-
-    100% {
-         opacity: 1;
-         transform: scale(1)
-    }
-}
-
-
 .button-ul-market {
     padding: 8px 12px;
     color: #fff;
@@ -153,7 +177,7 @@
 
 .button-market {
     width: 90%;
-    padding: 8px 16px;
+    padding: 16px 16px;
     color: #fff;
     background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
     border-radius: 10px;
