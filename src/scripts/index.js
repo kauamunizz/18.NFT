@@ -1,4 +1,5 @@
 import '../styles/styles.scss';
+import { POLAROIDE } from './polaroides';
 
 
 $(function (){
@@ -13,3 +14,16 @@ $(function (){
         variableWidth: true
     })
 });
+
+console.log(POLAROIDE);
+
+
+document.querySelectorAll('.controle').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const btn = e.currentTarget;
+        const dataBtn = btn.dataset.btn;
+
+        document.querySelectorAll('.carousel-items').forEach(dataBtn => dataBtn.style.display = 'none');
+        document.querySelector(dataBtn).style.display = 'grid';
+    })
+})
