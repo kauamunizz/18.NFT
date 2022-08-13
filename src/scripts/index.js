@@ -33,7 +33,7 @@ function createCard(card) {
     return /*html*/`
         <div class="polaroide">
             <div >
-                <img class="galeria-imagem" src="${image}">
+                <img class="galeria-imagem" src='${image}'>
             </div>
             <div class="infos-bloco">
                 <div class="infos">
@@ -51,5 +51,5 @@ function createCard(card) {
 
 POLAROIDE.forEach(card => {
     document.querySelector('.galeria-market')
-    .insertAdjacentHTML('afterbegin', createCard(card));
+    .insertAdjacentHTML('beforeend', createCard(card));
 });
