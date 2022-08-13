@@ -15,8 +15,6 @@ $(function (){
     })
 });
 
-console.log(POLAROIDE);
-
 
 document.querySelectorAll('.controle').forEach(button => {
     button.addEventListener('click', (e) => {
@@ -26,7 +24,7 @@ document.querySelectorAll('.controle').forEach(button => {
         document.querySelectorAll('.carousel-items').forEach(dataBtn => dataBtn.style.display = 'none');
         document.querySelector(dataBtn).style.display = 'grid';
     })
-})
+});
 
 
 function createCard(card) {
@@ -49,7 +47,7 @@ function createCard(card) {
             <button class="button-market buy" type="button">Collect Now</button>
         </div>
     `;
-}
+};
 
 POLAROIDE.forEach(card => {
     document.querySelector('.galeria-market')
