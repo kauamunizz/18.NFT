@@ -1,5 +1,3 @@
-import '../styles/styles.scss';
-
 export const POLAROIDE = [
     {
         image: 'http://127.0.0.1:5173/src/assets/imgs/market-place-1.png',

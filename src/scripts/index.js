@@ -1,5 +1,6 @@
 import '../styles/styles.scss';
 import { POLAROIDE } from './polaroides';
+import { POLAROIDE2 } from './polaroides copy';
 
 
 $(function (){
@@ -51,7 +52,36 @@ function createCard(card) {
     `;
 }
 
+// POLAROIDE.forEach(card => {
+//     document.querySelector('.galeria-market')
+//     .insertAdjacentHTML('beforeend', createCard(card));
+// });
+
+
+// document.querySelector('.view-more').addEventListener('click', () => {
+//     document.querySelector('.galeria-market').POLAROIDE.forEach(card => {
+//         document.querySelector('.galeria-market')
+//         .insertAdjacentHTML('beforeend', createCard(card));
+//     })
+// })
+
+
+// teste
+
 POLAROIDE.forEach(card => {
     document.querySelector('.galeria-market')
     .insertAdjacentHTML('beforeend', createCard(card));
+
+});
+
+document.querySelector('.view-more').addEventListener('click', () => {
+
+    POLAROIDE2.forEach(card => {
+        document.querySelector('.galeria-market')
+        .insertAdjacentHTML('beforeend', createCard(card));
+    })
+
+    if(document.querySelector('.galeria-market').childElementCount === 16){
+        document.querySelector('.view-more').classList.add("hidde")
+    }
 });
