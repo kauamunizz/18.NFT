@@ -2,7 +2,7 @@ import '../styles/styles.scss';
 
 export const POLAROIDE = [
     {
-        image: './src/assets/imgs/market-place-1.png',
+        image: 'http://127.0.0.1:5173/src/assets/imgs/market-place-1.png',
         name: 'Inception',
         price: 0.8,
         author: '@loidonsaf',
