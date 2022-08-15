@@ -35,7 +35,7 @@ function createCard(card) {
     return /*html*/`
         <div class="polaroide">
             <div >
-                <img class="galeria-imagem" src='${image}'>
+                <img class="galeria-imagem" src="${image}">
             </div>
             <div class="infos-bloco">
                 <div class="infos">
