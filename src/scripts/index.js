@@ -1,8 +1,5 @@
 import '../styles/styles.scss';
-import { CAROUSEL } from './carousel';
-import { GALERIA } from './galeria';
-import { POLAROIDE } from './polaroides';
-import { POLAROIDE2 } from './polaroides2';
+import { CAROUSEL, GALERIA, POLAROIDE, POLAROIDE2 } from '../data';
 
 // carousel + JQUERY
 $(function (){
@@ -18,6 +15,7 @@ $(function (){
     })
 });
 // fim carousel
+
 
 // botao funcional carousel
 document.querySelectorAll('.controle').forEach(button => {
@@ -58,7 +56,6 @@ POLAROIDE.forEach(card => {
     document.querySelector('.galeria-market')
     .insertAdjacentHTML('beforeend', createCard(card));
 });
-
 
 // fim POLAROIDE
 
@@ -135,6 +132,6 @@ document.querySelector('.view-more').addEventListener('click', () => {
     })
 
     if(document.querySelector('.galeria-market').childElementCount === 16){
-        document.querySelector('.view-more').classList.add("hidde")
+        document.querySelector('.view-more').style.display = 'none'
     }
 });
