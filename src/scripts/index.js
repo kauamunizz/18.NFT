@@ -1,9 +1,20 @@
 'strict mode'
 
 import '../styles/styles.scss';
-import { CAROUSEL, GALERIA, POLAROIDE, POLAROIDE2 } from '../data';
+import { CAROUSEL, GALERIA, POLAROIDE } from '../data';
 
 const index = (() => {
+
+    let pageIndex = 8;
+
+    function render(qtd) {
+        POLAROIDE.lista.slice(pageIndex-qtd, pageIndex).forEach((card) => {
+            document.querySelector('.galeria-market')
+            .insertAdjacentHTML('beforeend', createCard(card));
+        })
+    }
+
+
     // criacao dinamica para CARD POLAROIDE
     function createCard(card) {
         const {image, name, price, author} = card;
@@ -66,16 +77,17 @@ const index = (() => {
             </div>
         `;
     }
+    
+    function showMore() {
+        pageIndex += 4;
+        render(4);
+    }
 
     function events() {
-        // Criacao botao VIEW MORE - GALERIA
+        // // Criacao botao VIEW MORE - GALERIA
         document.querySelector('.view-more').addEventListener('click', () => {
-
-            POLAROIDE2.forEach(card => {
-                document.querySelector('.galeria-market')
-                .insertAdjacentHTML('beforeend', createCard(card));
-            })
-
+            showMore();
+            
             if(document.querySelector('.galeria-market').childElementCount === 16){
                 document.querySelector('.view-more').style.display = 'none'
             }
@@ -86,14 +98,32 @@ const index = (() => {
             button.addEventListener('click', (e) => {
                 const btn = e.currentTarget;
                 const dataBtn = btn.dataset.btn;
-
+                
                 document.querySelectorAll('.carousel-items').forEach(dataBtn => dataBtn.style.display = 'none');
                 document.querySelector(dataBtn).style.display = 'grid';
             })
         });
     }
 
+    document.querySelector('.btn-1').addEventListener("click", (event) => {
+        const clickButton = event.currentTarget;
+        
+        clickButton.classList.add('active')
+        document.querySelector('.btn-2').classList.remove('active');
+
+    });
+    
+    document.querySelector('.btn-2').addEventListener("click", (event) => {
+        const clickButton = event.currentTarget;
+        
+        clickButton.classList.add('active');
+        document.querySelector('.btn-1').classList.remove('active');
+    })
+    
+
     function init() {
+        render(8);
+
         // carousel + JQUERY
         $(function (){
             $('.carousel-items').slick({
@@ -106,11 +136,6 @@ const index = (() => {
                 centerPadding: '60px',
                 variableWidth: true
             })
-        });
-
-        POLAROIDE.forEach(card => {
-            document.querySelector('.galeria-market')
-            .insertAdjacentHTML('beforeend', createCard(card));
         });
 
         GALERIA.forEach(cartao => {

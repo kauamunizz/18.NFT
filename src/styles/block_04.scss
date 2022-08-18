@@ -11,6 +11,7 @@
         display: flex;
         justify-content: center;
         padding-top: 60px;
+        flex-wrap: wrap;
 
         .market-list-item {
             list-style: none;
@@ -22,7 +23,8 @@
             
              a {
                 text-decoration: none;
-                margin: 0 5px;
+                display: inline-block;
+                margin: 10px 5px 0;
             }
         }
     }

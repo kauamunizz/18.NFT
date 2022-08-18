@@ -30,6 +30,19 @@
             a {
                 text-decoration: none;
             }
+            
+        }
+        .button-controle {
+            padding: 10px 20px;
+            color: #fff;
+            background: transparent;
+            border: 2px solid #3633D0;
+            border-radius: 30px;       
+
+            &.active {
+                border: none;
+                background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
+            }
         }
     }
 }
@@ -198,6 +211,7 @@
                 background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
                 border-radius: 10px;
                 margin-left: -3px;
+
             }
         }
     }
